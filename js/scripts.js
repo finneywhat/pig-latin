@@ -7,7 +7,7 @@ var pigLatin = function(sentence) {
       if ((sentence.charAt(i).toLowerCase() === 'q') && (sentence.charAt(i+1).toLowerCase() === 'u')){
         i += 2;
       };
-      if (isVowel(sentence.charAt(i))) {
+      if ((isVowel(sentence.charAt(i))) || (sentence.charAt(i).toLowerCase() === 'y')) {
         var newStr = sentence.slice(i) + sentence.slice(0, i);
         return sentence = addAY(newStr);
       };
