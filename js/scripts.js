@@ -1,13 +1,22 @@
 // Back-End
 var pigLatin = function(sentence) {
+
   if (isVowel(sentence.charAt(0))) {
-    sentence = sentence + "ay";
+    sentence = addAY(sentence);
   } else {
-    var newStr = sentence.slice(1) + sentence.charAt(0);
-    sentence = newStr;
-  }
+    for (var i = 1; i < sentence.length; i++) {
+      if (isVowel(sentence.charAt(i))) {
+        var newStr = sentence.slice(i) + sentence.slice(0, i);
+        sentence = newStr;
+      };
+    };
+  };
 
   return sentence;
+}
+
+var addAY = function(word) {
+  return word + "ay";
 }
 
 var isVowel = function(char) {
