@@ -35,7 +35,7 @@
 * output: "ouy"
 
 ### make it work with sentence
-* input: "Pig Latin translator"
+* input: "Pig Latin Translator"
 * output: "igPay atinLay anslatorTray"
 
 ### description
