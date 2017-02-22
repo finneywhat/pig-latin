@@ -1,3 +1,7 @@
 #error {
   display: none;
 }
+
+.colorBackground {
+  background-color: #3ac93c;
+}
