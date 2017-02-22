@@ -4,6 +4,9 @@ var pigLatin = function(sentence) {
     return sentence = addAY(sentence);
   } else {
     for (var i = 1; i < sentence.length; i++) {
+      if ((sentence.charAt(i).toLowerCase() === 'q') && (sentence.charAt(i+1).toLowerCase() === 'u')){
+        i += 2;
+      };
       if (isVowel(sentence.charAt(i))) {
         var newStr = sentence.slice(i) + sentence.slice(0, i);
         return sentence = addAY(newStr);
