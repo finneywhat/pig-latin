@@ -39,7 +39,16 @@ $(function() {
   $("#pig-latin").submit(function() {
     event.preventDefault();
     var sentence = $("input#sentence").val();
-    var result = pigLatin(sentence);
-    $("#result").text(result);
+    var reg = /[^a-z | \s]/i;
+    if (reg.test(sentence)) {
+      console.log("other stuff");
+      $("#result").empty();
+      $("#error").show();
+    } else {
+      var result = pigLatin(sentence);
+      $("#error").hide();
+      $("#result").text(result);
+    }
+
   })
 })
