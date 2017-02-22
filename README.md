@@ -34,7 +34,9 @@
 * input: "you"
 * output: "ouy"
 
-
+### make it work with sentence
+* input: "Pig Latin translator"
+* output: "igPay atinLay anslatorTray"
 
 ### description
 * input:
